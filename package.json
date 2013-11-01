@@ -1,0 +1,29 @@
+{
+  "name": "sensornode",
+  "version": "0.0.0",
+  "description": "node utilities for flashing sensor nodes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solids/sensornode.git"
+  },
+  "keywords": [
+    "avr",
+    "atmel",
+    "atmega88pa",
+    "tpad",
+    "tmpad"
+  ],
+  "author": "Elijah Insua <tmpvar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/solids/sensornode/issues"
+  },
+  "dependencies": {
+    "serialport": "~1.2.3",
+    "intelhex": "0.0.1"
+  }
+}
