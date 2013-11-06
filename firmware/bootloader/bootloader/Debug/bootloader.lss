@@ -1,0 +1,1033 @@
+
+bootloader.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00001c8c  00000520  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000048c  00001800  00001800  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000005  00800100  00800100  00000520  2**0
+                  ALLOC
+  3 .noinit       00000001  00800105  00800105  00000520  2**0
+                  ALLOC
+  4 .stab         00000738  00000000  00000000  00000520  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  5 .stabstr      0000010b  00000000  00000000  00000c58  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .comment      0000002f  00000000  00000000  00000d63  2**0
+                  CONTENTS, READONLY
+  7 .debug_aranges 000000a8  00000000  00000000  00000d92  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_info   000009e8  00000000  00000000  00000e3a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev 000003bf  00000000  00000000  00001822  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_line   000004ee  00000000  00000000  00001be1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_frame  000001e0  00000000  00000000  000020d0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_str    0000039b  00000000  00000000  000022b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_loc    00000532  00000000  00000000  0000264b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 000000b8  00000000  00000000  00002b7d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00001800 <__vectors>:
+    1800:	19 c0       	rjmp	.+50     	; 0x1834 <__ctors_end>
+    1802:	28 c0       	rjmp	.+80     	; 0x1854 <__bad_interrupt>
+    1804:	27 c0       	rjmp	.+78     	; 0x1854 <__bad_interrupt>
+    1806:	26 c0       	rjmp	.+76     	; 0x1854 <__bad_interrupt>
+    1808:	25 c0       	rjmp	.+74     	; 0x1854 <__bad_interrupt>
+    180a:	24 c0       	rjmp	.+72     	; 0x1854 <__bad_interrupt>
+    180c:	23 c0       	rjmp	.+70     	; 0x1854 <__bad_interrupt>
+    180e:	22 c0       	rjmp	.+68     	; 0x1854 <__bad_interrupt>
+    1810:	21 c0       	rjmp	.+66     	; 0x1854 <__bad_interrupt>
+    1812:	20 c0       	rjmp	.+64     	; 0x1854 <__bad_interrupt>
+    1814:	1f c0       	rjmp	.+62     	; 0x1854 <__bad_interrupt>
+    1816:	1e c0       	rjmp	.+60     	; 0x1854 <__bad_interrupt>
+    1818:	1d c0       	rjmp	.+58     	; 0x1854 <__bad_interrupt>
+    181a:	1c c0       	rjmp	.+56     	; 0x1854 <__bad_interrupt>
+    181c:	1b c0       	rjmp	.+54     	; 0x1854 <__bad_interrupt>
+    181e:	1a c0       	rjmp	.+52     	; 0x1854 <__bad_interrupt>
+    1820:	19 c0       	rjmp	.+50     	; 0x1854 <__bad_interrupt>
+    1822:	18 c0       	rjmp	.+48     	; 0x1854 <__bad_interrupt>
+    1824:	17 c0       	rjmp	.+46     	; 0x1854 <__bad_interrupt>
+    1826:	16 c0       	rjmp	.+44     	; 0x1854 <__bad_interrupt>
+    1828:	15 c0       	rjmp	.+42     	; 0x1854 <__bad_interrupt>
+    182a:	14 c0       	rjmp	.+40     	; 0x1854 <__bad_interrupt>
+    182c:	13 c0       	rjmp	.+38     	; 0x1854 <__bad_interrupt>
+    182e:	12 c0       	rjmp	.+36     	; 0x1854 <__bad_interrupt>
+    1830:	11 c0       	rjmp	.+34     	; 0x1854 <__bad_interrupt>
+    1832:	10 c0       	rjmp	.+32     	; 0x1854 <__bad_interrupt>
+
+00001834 <__ctors_end>:
+    1834:	11 24       	eor	r1, r1
+    1836:	1f be       	out	0x3f, r1	; 63
+    1838:	cf ef       	ldi	r28, 0xFF	; 255
+    183a:	d4 e0       	ldi	r29, 0x04	; 4
+    183c:	de bf       	out	0x3e, r29	; 62
+    183e:	cd bf       	out	0x3d, r28	; 61
+
+00001840 <__do_clear_bss>:
+    1840:	21 e0       	ldi	r18, 0x01	; 1
+    1842:	a0 e0       	ldi	r26, 0x00	; 0
+    1844:	b1 e0       	ldi	r27, 0x01	; 1
+    1846:	01 c0       	rjmp	.+2      	; 0x184a <.do_clear_bss_start>
+
+00001848 <.do_clear_bss_loop>:
+    1848:	1d 92       	st	X+, r1
+
+0000184a <.do_clear_bss_start>:
+    184a:	a5 30       	cpi	r26, 0x05	; 5
+    184c:	b2 07       	cpc	r27, r18
+    184e:	e1 f7       	brne	.-8      	; 0x1848 <.do_clear_bss_loop>
+    1850:	2e d1       	rcall	.+604    	; 0x1aae <main>
+    1852:	1a c2       	rjmp	.+1076   	; 0x1c88 <_exit>
+
+00001854 <__bad_interrupt>:
+    1854:	d5 cf       	rjmp	.-86     	; 0x1800 <__vectors>
+
+00001856 <boot_program_page>:
+  uart_send(mode);
+  mode_reset();
+}
+
+void boot_program_page (uint32_t page, uint8_t *buf)
+{
+    1856:	1f 93       	push	r17
+    1858:	cf 93       	push	r28
+    185a:	df 93       	push	r29
+  uint16_t i;
+  uint8_t sreg;
+
+  // Disable interrupts.
+
+  sreg = SREG;
+    185c:	cf b7       	in	r28, 0x3f	; 63
+  
+  eeprom_busy_wait ();
+    185e:	f9 99       	sbic	0x1f, 1	; 31
+    1860:	fe cf       	rjmp	.-4      	; 0x185e <boot_program_page+0x8>
+
+  boot_page_erase (page);
+    1862:	83 e0       	ldi	r24, 0x03	; 3
+    1864:	fb 01       	movw	r30, r22
+    1866:	80 93 57 00 	sts	0x0057, r24
+    186a:	e8 95       	spm
+  boot_spm_busy_wait ();      // Wait until the memory is erased.
+    186c:	07 b6       	in	r0, 0x37	; 55
+    186e:	00 fc       	sbrc	r0, 0
+    1870:	fd cf       	rjmp	.-6      	; 0x186c <boot_program_page+0x16>
+    1872:	80 e0       	ldi	r24, 0x00	; 0
+    1874:	90 e0       	ldi	r25, 0x00	; 0
+    // Set up little-endian word.
+
+    uint16_t w = *buf++;
+    w += (*buf++) << 8;
+    
+    boot_page_fill (page + i, w);
+    1876:	d1 e0       	ldi	r29, 0x01	; 1
+inline void mode_forward_reset() {
+  uart_send(mode);
+  mode_reset();
+}
+
+void boot_program_page (uint32_t page, uint8_t *buf)
+    1878:	da 01       	movw	r26, r20
+    187a:	a8 0f       	add	r26, r24
+    187c:	b9 1f       	adc	r27, r25
+
+  for (i=0; i<SPM_PAGESIZE; i+=2)
+  {
+    // Set up little-endian word.
+
+    uint16_t w = *buf++;
+    187e:	1c 91       	ld	r17, X
+inline void mode_forward_reset() {
+  uart_send(mode);
+  mode_reset();
+}
+
+void boot_program_page (uint32_t page, uint8_t *buf)
+    1880:	fc 01       	movw	r30, r24
+    1882:	e6 0f       	add	r30, r22
+    1884:	f7 1f       	adc	r31, r23
+  for (i=0; i<SPM_PAGESIZE; i+=2)
+  {
+    // Set up little-endian word.
+
+    uint16_t w = *buf++;
+    w += (*buf++) << 8;
+    1886:	11 96       	adiw	r26, 0x01	; 1
+    1888:	3c 91       	ld	r19, X
+    188a:	20 e0       	ldi	r18, 0x00	; 0
+    188c:	d9 01       	movw	r26, r18
+    188e:	a1 0f       	add	r26, r17
+    1890:	b1 1d       	adc	r27, r1
+    
+    boot_page_fill (page + i, w);
+    1892:	0d 01       	movw	r0, r26
+    1894:	d0 93 57 00 	sts	0x0057, r29
+    1898:	e8 95       	spm
+    189a:	11 24       	eor	r1, r1
+  eeprom_busy_wait ();
+
+  boot_page_erase (page);
+  boot_spm_busy_wait ();      // Wait until the memory is erased.
+
+  for (i=0; i<SPM_PAGESIZE; i+=2)
+    189c:	02 96       	adiw	r24, 0x02	; 2
+    189e:	80 34       	cpi	r24, 0x40	; 64
+    18a0:	91 05       	cpc	r25, r1
+    18a2:	51 f7       	brne	.-44     	; 0x1878 <boot_program_page+0x22>
+    w += (*buf++) << 8;
+    
+    boot_page_fill (page + i, w);
+  }
+
+  boot_page_write (page);     // Store buffer in flash page.
+    18a4:	85 e0       	ldi	r24, 0x05	; 5
+    18a6:	fb 01       	movw	r30, r22
+    18a8:	80 93 57 00 	sts	0x0057, r24
+    18ac:	e8 95       	spm
+  boot_spm_busy_wait();       // Wait until the memory is written.
+    18ae:	07 b6       	in	r0, 0x37	; 55
+    18b0:	00 fc       	sbrc	r0, 0
+    18b2:	fd cf       	rjmp	.-6      	; 0x18ae <boot_program_page+0x58>
+
+  // Reenable RWW-section again. We need this if we want to jump back
+  // to the application after bootloading.
+
+  boot_rww_enable ();
+    18b4:	81 e1       	ldi	r24, 0x11	; 17
+    18b6:	80 93 57 00 	sts	0x0057, r24
+    18ba:	e8 95       	spm
+
+  // Re-enable interrupts (if they were ever enabled).
+
+  SREG = sreg;
+    18bc:	cf bf       	out	0x3f, r28	; 63
+}
+    18be:	df 91       	pop	r29
+    18c0:	cf 91       	pop	r28
+    18c2:	1f 91       	pop	r17
+    18c4:	08 95       	ret
+
+000018c6 <bootloader>:
+
+
+void bootloader() {
+    18c6:	4f 92       	push	r4
+    18c8:	5f 92       	push	r5
+    18ca:	6f 92       	push	r6
+    18cc:	7f 92       	push	r7
+    18ce:	8f 92       	push	r8
+    18d0:	9f 92       	push	r9
+    18d2:	af 92       	push	r10
+    18d4:	bf 92       	push	r11
+    18d6:	cf 92       	push	r12
+    18d8:	df 92       	push	r13
+    18da:	ef 92       	push	r14
+    18dc:	ff 92       	push	r15
+    18de:	0f 93       	push	r16
+    18e0:	1f 93       	push	r17
+    18e2:	cf 93       	push	r28
+    18e4:	df 93       	push	r29
+    18e6:	cd b7       	in	r28, 0x3d	; 61
+    18e8:	de b7       	in	r29, 0x3e	; 62
+    18ea:	c0 54       	subi	r28, 0x40	; 64
+    18ec:	d1 09       	sbc	r29, r1
+    18ee:	0f b6       	in	r0, 0x3f	; 63
+    18f0:	f8 94       	cli
+    18f2:	de bf       	out	0x3e, r29	; 62
+    18f4:	0f be       	out	0x3f, r0	; 63
+    18f6:	cd bf       	out	0x3d, r28	; 61
+          mode_forward_reset();
+        break;
+        
+        case protocol_erase:
+          for (i = 0; i < BOOT_START_ADDR; i += SPM_PAGESIZE) {
+            boot_page_erase(i);
+    18f8:	13 e0       	ldi	r17, 0x03	; 3
+
+void bootloader() {
+  uint32_t i, length, tmp;
+  uint8_t buffer[SPM_PAGESIZE];
+  
+  while (bootloading) {
+    18fa:	bd c0       	rjmp	.+378    	; 0x1a76 <bootloader+0x1b0>
+    mode = uart_recv();
+    18fc:	3d d1       	rcall	.+634    	; 0x1b78 <uart_recv>
+    18fe:	80 93 00 01 	sts	0x0100, r24
+    
+    while(mode) {
+    1902:	b5 c0       	rjmp	.+362    	; 0x1a6e <bootloader+0x1a8>
+      switch (mode) {
+    1904:	84 30       	cpi	r24, 0x04	; 4
+    1906:	09 f4       	brne	.+2      	; 0x190a <bootloader+0x44>
+    1908:	77 c0       	rjmp	.+238    	; 0x19f8 <bootloader+0x132>
+    190a:	30 f4       	brcc	.+12     	; 0x1918 <bootloader+0x52>
+    190c:	82 30       	cpi	r24, 0x02	; 2
+    190e:	61 f0       	breq	.+24     	; 0x1928 <bootloader+0x62>
+    1910:	83 30       	cpi	r24, 0x03	; 3
+    1912:	09 f0       	breq	.+2      	; 0x1916 <bootloader+0x50>
+    1914:	9c c0       	rjmp	.+312    	; 0x1a4e <bootloader+0x188>
+    1916:	1e c0       	rjmp	.+60     	; 0x1954 <bootloader+0x8e>
+    1918:	86 30       	cpi	r24, 0x06	; 6
+    191a:	79 f0       	breq	.+30     	; 0x193a <bootloader+0x74>
+    191c:	08 f4       	brcc	.+2      	; 0x1920 <bootloader+0x5a>
+    191e:	84 c0       	rjmp	.+264    	; 0x1a28 <bootloader+0x162>
+    1920:	87 30       	cpi	r24, 0x07	; 7
+    1922:	09 f0       	breq	.+2      	; 0x1926 <bootloader+0x60>
+    1924:	94 c0       	rjmp	.+296    	; 0x1a4e <bootloader+0x188>
+    1926:	90 c0       	rjmp	.+288    	; 0x1a48 <bootloader+0x182>
+
+        case protocol_forward:
+          uart_send(protocol_forward);
+    1928:	82 e0       	ldi	r24, 0x02	; 2
+    192a:	f6 d0       	rcall	.+492    	; 0x1b18 <uart_send>
+          length = uart_recv16(); // collect the length
+    192c:	4b d1       	rcall	.+662    	; 0x1bc4 <uart_recv16>
+    192e:	7c 01       	movw	r14, r24
+          uart_send16(length);
+    1930:	fb d0       	rcall	.+502    	; 0x1b28 <uart_send16>
+    while(mode) {
+      switch (mode) {
+
+        case protocol_forward:
+          uart_send(protocol_forward);
+          length = uart_recv16(); // collect the length
+    1932:	b7 01       	movw	r22, r14
+    1934:	80 e0       	ldi	r24, 0x00	; 0
+    1936:	90 e0       	ldi	r25, 0x00	; 0
+    1938:	5d c0       	rjmp	.+186    	; 0x19f4 <bootloader+0x12e>
+        case protocol_device_type:
+          // setup and emit a forward packet
+          // containing 2 bytes of the device
+          // signature.
+        
+          uart_send(protocol_forward);
+    193a:	82 e0       	ldi	r24, 0x02	; 2
+    193c:	ed d0       	rcall	.+474    	; 0x1b18 <uart_send>
+          uart_send16(0x0003);
+    193e:	83 e0       	ldi	r24, 0x03	; 3
+    1940:	90 e0       	ldi	r25, 0x00	; 0
+    1942:	f2 d0       	rcall	.+484    	; 0x1b28 <uart_send16>
+          uart_send(protocol_device_type);
+    1944:	86 e0       	ldi	r24, 0x06	; 6
+    1946:	e8 d0       	rcall	.+464    	; 0x1b18 <uart_send>
+          uart_send32(DEVICE_SIGNATURE);
+    1948:	60 e0       	ldi	r22, 0x00	; 0
+    194a:	71 e0       	ldi	r23, 0x01	; 1
+    194c:	80 e0       	ldi	r24, 0x00	; 0
+    194e:	90 e0       	ldi	r25, 0x00	; 0
+    1950:	fa d0       	rcall	.+500    	; 0x1b46 <uart_send32>
+    1952:	67 c0       	rjmp	.+206    	; 0x1a22 <bootloader+0x15c>
+          
+          mode_forward_reset();
+        break;
+        
+        case protocol_program:
+          uart_send(mode);        
+    1954:	83 e0       	ldi	r24, 0x03	; 3
+    1956:	e0 d0       	rcall	.+448    	; 0x1b18 <uart_send>
+          uart_pipe_passive(8);
+    1958:	68 e0       	ldi	r22, 0x08	; 8
+    195a:	70 e0       	ldi	r23, 0x00	; 0
+    195c:	80 e0       	ldi	r24, 0x00	; 0
+    195e:	90 e0       	ldi	r25, 0x00	; 0
+    1960:	5f d1       	rcall	.+702    	; 0x1c20 <uart_pipe_passive>
+
+          // read the device signature, it is important that we don't
+          // attempt to flash this chip with another device type's firmware
+          tmp = uart_recv32();
+    1962:	3a d1       	rcall	.+628    	; 0x1bd8 <uart_recv32>
+    1964:	6b 01       	movw	r12, r22
+    1966:	7c 01       	movw	r14, r24
+
+          // read the length of the data bytes (uint32_t)
+          length = uart_recv32();
+    1968:	37 d1       	rcall	.+622    	; 0x1bd8 <uart_recv32>
+    196a:	4b 01       	movw	r8, r22
+    196c:	5c 01       	movw	r10, r24
+          uart_pipe_passive(length);
+    196e:	58 d1       	rcall	.+688    	; 0x1c20 <uart_pipe_passive>
+          
+          if (tmp == DEVICE_SIGNATURE) {
+    1970:	c1 14       	cp	r12, r1
+    1972:	81 e0       	ldi	r24, 0x01	; 1
+    1974:	d8 06       	cpc	r13, r24
+    1976:	e1 04       	cpc	r14, r1
+    1978:	f1 04       	cpc	r15, r1
+    197a:	d1 f5       	brne	.+116    	; 0x19f0 <bootloader+0x12a>
+    197c:	24 c0       	rjmp	.+72     	; 0x19c6 <bootloader+0x100>
+            uint8_t buffer_loc = 0;
+            uint32_t program_page_loc = 0;
+            for (i = 0; i<length; i++) {
+              buffer[buffer_loc++] = uart_recv();
+    197e:	fc d0       	rcall	.+504    	; 0x1b78 <uart_recv>
+    1980:	e1 e0       	ldi	r30, 0x01	; 1
+    1982:	f0 e0       	ldi	r31, 0x00	; 0
+    1984:	ec 0f       	add	r30, r28
+    1986:	fd 1f       	adc	r31, r29
+    1988:	e0 0f       	add	r30, r16
+    198a:	f1 1d       	adc	r31, r1
+    198c:	80 83       	st	Z, r24
+    198e:	0f 5f       	subi	r16, 0xFF	; 255
+              if (buffer_loc >= SPM_PAGESIZE) {
+    1990:	00 34       	cpi	r16, 0x40	; 64
+    1992:	98 f0       	brcs	.+38     	; 0x19ba <bootloader+0xf4>
+                boot_program_page(program_page_loc, buffer);
+    1994:	ae 01       	movw	r20, r28
+    1996:	4f 5f       	subi	r20, 0xFF	; 255
+    1998:	5f 4f       	sbci	r21, 0xFF	; 255
+    199a:	c7 01       	movw	r24, r14
+    199c:	b6 01       	movw	r22, r12
+    199e:	5b df       	rcall	.-330    	; 0x1856 <boot_program_page>
+                program_page_loc += SPM_PAGESIZE;
+    19a0:	80 e4       	ldi	r24, 0x40	; 64
+    19a2:	c8 0e       	add	r12, r24
+    19a4:	d1 1c       	adc	r13, r1
+    19a6:	e1 1c       	adc	r14, r1
+    19a8:	f1 1c       	adc	r15, r1
+                buffer_loc = 0;
+                memset(buffer, 0xFF, SPM_PAGESIZE);
+    19aa:	40 e4       	ldi	r20, 0x40	; 64
+    19ac:	50 e0       	ldi	r21, 0x00	; 0
+    19ae:	6f ef       	ldi	r22, 0xFF	; 255
+    19b0:	70 e0       	ldi	r23, 0x00	; 0
+    19b2:	ce 01       	movw	r24, r28
+    19b4:	01 96       	adiw	r24, 0x01	; 1
+    19b6:	61 d1       	rcall	.+706    	; 0x1c7a <memset>
+            for (i = 0; i<length; i++) {
+              buffer[buffer_loc++] = uart_recv();
+              if (buffer_loc >= SPM_PAGESIZE) {
+                boot_program_page(program_page_loc, buffer);
+                program_page_loc += SPM_PAGESIZE;
+                buffer_loc = 0;
+    19b8:	00 e0       	ldi	r16, 0x00	; 0
+          uart_pipe_passive(length);
+          
+          if (tmp == DEVICE_SIGNATURE) {
+            uint8_t buffer_loc = 0;
+            uint32_t program_page_loc = 0;
+            for (i = 0; i<length; i++) {
+    19ba:	8f ef       	ldi	r24, 0xFF	; 255
+    19bc:	48 1a       	sub	r4, r24
+    19be:	58 0a       	sbc	r5, r24
+    19c0:	68 0a       	sbc	r6, r24
+    19c2:	78 0a       	sbc	r7, r24
+    19c4:	07 c0       	rjmp	.+14     	; 0x19d4 <bootloader+0x10e>
+
+          // read the length of the data bytes (uint32_t)
+          length = uart_recv32();
+          uart_pipe_passive(length);
+          
+          if (tmp == DEVICE_SIGNATURE) {
+    19c6:	c1 2c       	mov	r12, r1
+    19c8:	d1 2c       	mov	r13, r1
+    19ca:	76 01       	movw	r14, r12
+    19cc:	00 e0       	ldi	r16, 0x00	; 0
+    19ce:	41 2c       	mov	r4, r1
+    19d0:	51 2c       	mov	r5, r1
+    19d2:	32 01       	movw	r6, r4
+            uint8_t buffer_loc = 0;
+            uint32_t program_page_loc = 0;
+            for (i = 0; i<length; i++) {
+    19d4:	48 14       	cp	r4, r8
+    19d6:	59 04       	cpc	r5, r9
+    19d8:	6a 04       	cpc	r6, r10
+    19da:	7b 04       	cpc	r7, r11
+    19dc:	81 f6       	brne	.-96     	; 0x197e <bootloader+0xb8>
+                buffer_loc = 0;
+                memset(buffer, 0xFF, SPM_PAGESIZE);
+              }
+            }
+              
+            boot_program_page(program_page_loc, buffer);
+    19de:	ae 01       	movw	r20, r28
+    19e0:	4f 5f       	subi	r20, 0xFF	; 255
+    19e2:	5f 4f       	sbci	r21, 0xFF	; 255
+    19e4:	c7 01       	movw	r24, r14
+    19e6:	b6 01       	movw	r22, r12
+    19e8:	36 df       	rcall	.-404    	; 0x1856 <boot_program_page>
+
+            bootloading = 0;
+    19ea:	10 92 05 01 	sts	0x0105, r1
+    19ee:	39 c0       	rjmp	.+114    	; 0x1a62 <bootloader+0x19c>
+            
+          } else {
+            // if this device does not match the incoming device
+            // signature, then just pass it on.
+            uart_pipe_active(length);
+    19f0:	c5 01       	movw	r24, r10
+    19f2:	b4 01       	movw	r22, r8
+    19f4:	1e d1       	rcall	.+572    	; 0x1c32 <uart_pipe_active>
+    19f6:	35 c0       	rjmp	.+106    	; 0x1a62 <bootloader+0x19c>
+          mode_reset();
+        break;
+        
+        case protocol_read_flash:
+
+          uart_send(protocol_forward);
+    19f8:	82 e0       	ldi	r24, 0x02	; 2
+    19fa:	8e d0       	rcall	.+284    	; 0x1b18 <uart_send>
+          uart_send16(BOOT_START_ADDR+1);
+    19fc:	81 e0       	ldi	r24, 0x01	; 1
+    19fe:	98 e1       	ldi	r25, 0x18	; 24
+    1a00:	93 d0       	rcall	.+294    	; 0x1b28 <uart_send16>
+          uart_send(protocol_read_flash);
+    1a02:	84 e0       	ldi	r24, 0x04	; 4
+    1a04:	89 d0       	rcall	.+274    	; 0x1b18 <uart_send>
+    1a06:	e1 2c       	mov	r14, r1
+    1a08:	f1 2c       	mov	r15, r1
+          
+          for (i = 0; i < BOOT_START_ADDR; i+=2) {
+            uart_send16LE(pgm_read_word(i));
+    1a0a:	f7 01       	movw	r30, r14
+    1a0c:	25 91       	lpm	r18, Z+
+    1a0e:	34 91       	lpm	r19, Z
+    1a10:	c9 01       	movw	r24, r18
+    1a12:	92 d0       	rcall	.+292    	; 0x1b38 <uart_send16LE>
+    1a14:	82 e0       	ldi	r24, 0x02	; 2
+    1a16:	e8 0e       	add	r14, r24
+    1a18:	f1 1c       	adc	r15, r1
+
+          uart_send(protocol_forward);
+          uart_send16(BOOT_START_ADDR+1);
+          uart_send(protocol_read_flash);
+          
+          for (i = 0; i < BOOT_START_ADDR; i+=2) {
+    1a1a:	e1 14       	cp	r14, r1
+    1a1c:	88 e1       	ldi	r24, 0x18	; 24
+    1a1e:	f8 06       	cpc	r15, r24
+    1a20:	a1 f7       	brne	.-24     	; 0x1a0a <bootloader+0x144>
+  // Reset and passive uart pipes
+  uart_pipe_passive(0);
+}
+
+inline void mode_forward_reset() {
+  uart_send(mode);
+    1a22:	80 91 00 01 	lds	r24, 0x0100
+    1a26:	11 c0       	rjmp	.+34     	; 0x1a4a <bootloader+0x184>
+  
+  while (bootloading) {
+    mode = uart_recv();
+    
+    while(mode) {
+      switch (mode) {
+    1a28:	e0 e0       	ldi	r30, 0x00	; 0
+    1a2a:	f0 e0       	ldi	r31, 0x00	; 0
+          mode_forward_reset();
+        break;
+        
+        case protocol_erase:
+          for (i = 0; i < BOOT_START_ADDR; i += SPM_PAGESIZE) {
+            boot_page_erase(i);
+    1a2c:	10 93 57 00 	sts	0x0057, r17
+    1a30:	e8 95       	spm
+            boot_spm_busy_wait();
+    1a32:	07 b6       	in	r0, 0x37	; 55
+    1a34:	00 fc       	sbrc	r0, 0
+    1a36:	fd cf       	rjmp	.-6      	; 0x1a32 <bootloader+0x16c>
+    1a38:	e0 5c       	subi	r30, 0xC0	; 192
+    1a3a:	ff 4f       	sbci	r31, 0xFF	; 255
+
+          mode_forward_reset();
+        break;
+        
+        case protocol_erase:
+          for (i = 0; i < BOOT_START_ADDR; i += SPM_PAGESIZE) {
+    1a3c:	e1 15       	cp	r30, r1
+    1a3e:	88 e1       	ldi	r24, 0x18	; 24
+    1a40:	f8 07       	cpc	r31, r24
+    1a42:	a1 f7       	brne	.-24     	; 0x1a2c <bootloader+0x166>
+  // Reset and passive uart pipes
+  uart_pipe_passive(0);
+}
+
+inline void mode_forward_reset() {
+  uart_send(mode);
+    1a44:	85 e0       	ldi	r24, 0x05	; 5
+    1a46:	01 c0       	rjmp	.+2      	; 0x1a4a <bootloader+0x184>
+    1a48:	87 e0       	ldi	r24, 0x07	; 7
+    1a4a:	66 d0       	rcall	.+204    	; 0x1b18 <uart_send>
+    1a4c:	0a c0       	rjmp	.+20     	; 0x1a62 <bootloader+0x19c>
+        case protocol_reset:
+          mode_forward_reset();
+        break;
+
+        default:
+          uart_send(protocol_forward);
+    1a4e:	82 e0       	ldi	r24, 0x02	; 2
+    1a50:	63 d0       	rcall	.+198    	; 0x1b18 <uart_send>
+          uart_send(protocol_error);
+    1a52:	8f ef       	ldi	r24, 0xFF	; 255
+    1a54:	61 d0       	rcall	.+194    	; 0x1b18 <uart_send>
+          uart_send(mode);
+    1a56:	80 91 00 01 	lds	r24, 0x0100
+    1a5a:	5e d0       	rcall	.+188    	; 0x1b18 <uart_send>
+          uart_send16(0x0404);
+    1a5c:	84 e0       	ldi	r24, 0x04	; 4
+    1a5e:	94 e0       	ldi	r25, 0x04	; 4
+    1a60:	63 d0       	rcall	.+198    	; 0x1b28 <uart_send16>
+uint8_t bootloading ATTR_NO_INIT;
+
+uint8_t mode = 0, mode_state = 0;
+
+inline void mode_reset() {
+  mode = 0;
+    1a62:	10 92 00 01 	sts	0x0100, r1
+
+  // Reset and passive uart pipes
+  uart_pipe_passive(0);
+    1a66:	60 e0       	ldi	r22, 0x00	; 0
+    1a68:	70 e0       	ldi	r23, 0x00	; 0
+    1a6a:	cb 01       	movw	r24, r22
+    1a6c:	d9 d0       	rcall	.+434    	; 0x1c20 <uart_pipe_passive>
+  uint8_t buffer[SPM_PAGESIZE];
+  
+  while (bootloading) {
+    mode = uart_recv();
+    
+    while(mode) {
+    1a6e:	80 91 00 01 	lds	r24, 0x0100
+    1a72:	81 11       	cpse	r24, r1
+    1a74:	47 cf       	rjmp	.-370    	; 0x1904 <bootloader+0x3e>
+
+void bootloader() {
+  uint32_t i, length, tmp;
+  uint8_t buffer[SPM_PAGESIZE];
+  
+  while (bootloading) {
+    1a76:	80 91 05 01 	lds	r24, 0x0105
+    1a7a:	81 11       	cpse	r24, r1
+    1a7c:	3f cf       	rjmp	.-386    	; 0x18fc <bootloader+0x36>
+          mode_reset();
+        break;
+      }
+    }
+  }
+}
+    1a7e:	c0 5c       	subi	r28, 0xC0	; 192
+    1a80:	df 4f       	sbci	r29, 0xFF	; 255
+    1a82:	0f b6       	in	r0, 0x3f	; 63
+    1a84:	f8 94       	cli
+    1a86:	de bf       	out	0x3e, r29	; 62
+    1a88:	0f be       	out	0x3f, r0	; 63
+    1a8a:	cd bf       	out	0x3d, r28	; 61
+    1a8c:	df 91       	pop	r29
+    1a8e:	cf 91       	pop	r28
+    1a90:	1f 91       	pop	r17
+    1a92:	0f 91       	pop	r16
+    1a94:	ff 90       	pop	r15
+    1a96:	ef 90       	pop	r14
+    1a98:	df 90       	pop	r13
+    1a9a:	cf 90       	pop	r12
+    1a9c:	bf 90       	pop	r11
+    1a9e:	af 90       	pop	r10
+    1aa0:	9f 90       	pop	r9
+    1aa2:	8f 90       	pop	r8
+    1aa4:	7f 90       	pop	r7
+    1aa6:	6f 90       	pop	r6
+    1aa8:	5f 90       	pop	r5
+    1aaa:	4f 90       	pop	r4
+    1aac:	08 95       	ret
+
+00001aae <main>:
+
+int main(void) {
+
+  /* Disable watchdog if enabled by bootloader/fuses */
+  uint8_t was_watchdog_reset = MCUSR & (1 << WDRF);
+    1aae:	c4 b7       	in	r28, 0x34	; 52
+    1ab0:	c8 70       	andi	r28, 0x08	; 8
+  MCUSR &= ~(1 << WDRF);
+    1ab2:	84 b7       	in	r24, 0x34	; 52
+    1ab4:	87 7f       	andi	r24, 0xF7	; 247
+    1ab6:	84 bf       	out	0x34, r24	; 52
+  wdt_disable();
+    1ab8:	88 e1       	ldi	r24, 0x18	; 24
+    1aba:	0f b6       	in	r0, 0x3f	; 63
+    1abc:	f8 94       	cli
+    1abe:	80 93 60 00 	sts	0x0060, r24
+    1ac2:	10 92 60 00 	sts	0x0060, r1
+    1ac6:	0f be       	out	0x3f, r0	; 63
+The type of x is clock_div_t.
+*/
+void clock_prescale_set(clock_div_t __x)
+{
+    uint8_t __tmp = _BV(CLKPCE);
+    __asm__ __volatile__ (
+    1ac8:	90 e0       	ldi	r25, 0x00	; 0
+    1aca:	80 e8       	ldi	r24, 0x80	; 128
+    1acc:	0f b6       	in	r0, 0x3f	; 63
+    1ace:	f8 94       	cli
+    1ad0:	80 93 61 00 	sts	0x0061, r24
+    1ad4:	90 93 61 00 	sts	0x0061, r25
+    1ad8:	0f be       	out	0x3f, r0	; 63
+
+  /* Disable clock division */
+  clock_prescale_set(clock_div_1);
+
+  uart_sync_init();
+    1ada:	c3 d0       	rcall	.+390    	; 0x1c62 <uart_sync_init>
+
+  // if the flash has not been written, successfully,
+  // by this bootloader.
+  if (pgm_read_word(0) == 0xFFFF || was_watchdog_reset) {
+    1adc:	e0 e0       	ldi	r30, 0x00	; 0
+    1ade:	f0 e0       	ldi	r31, 0x00	; 0
+    1ae0:	85 91       	lpm	r24, Z+
+    1ae2:	94 91       	lpm	r25, Z
+    1ae4:	01 96       	adiw	r24, 0x01	; 1
+    1ae6:	11 f0       	breq	.+4      	; 0x1aec <main+0x3e>
+    1ae8:	cc 23       	and	r28, r28
+    1aea:	19 f0       	breq	.+6      	; 0x1af2 <main+0x44>
+    bootloading = 1;
+    1aec:	81 e0       	ldi	r24, 0x01	; 1
+    1aee:	80 93 05 01 	sts	0x0105, r24
+  }
+
+  if (bootloading) {
+    1af2:	80 91 05 01 	lds	r24, 0x0105
+    1af6:	81 11       	cpse	r24, r1
+    bootloader();
+    1af8:	e6 de       	rcall	.-564    	; 0x18c6 <bootloader>
+  }
+  
+  // Execute the program
+  ((void (*)(void))0x0000)();
+    1afa:	e0 e0       	ldi	r30, 0x00	; 0
+    1afc:	f0 e0       	ldi	r31, 0x00	; 0
+    1afe:	09 95       	icall
+  
+  // Now we enable the watchdog timer and wait for reset.
+  wdt_enable(WDTO_250MS);
+    1b00:	2c e0       	ldi	r18, 0x0C	; 12
+    1b02:	88 e1       	ldi	r24, 0x18	; 24
+    1b04:	90 e0       	ldi	r25, 0x00	; 0
+    1b06:	0f b6       	in	r0, 0x3f	; 63
+    1b08:	f8 94       	cli
+    1b0a:	a8 95       	wdr
+    1b0c:	80 93 60 00 	sts	0x0060, r24
+    1b10:	0f be       	out	0x3f, r0	; 63
+    1b12:	20 93 60 00 	sts	0x0060, r18
+    1b16:	ff cf       	rjmp	.-2      	; 0x1b16 <main+0x68>
+
+00001b18 <uart_send>:
+#include "uart_sync.h"
+
+void uart_send(char c) {
+  while (( UCSR0A & (1 << UDRE0 )) == 0) {};
+    1b18:	e0 ec       	ldi	r30, 0xC0	; 192
+    1b1a:	f0 e0       	ldi	r31, 0x00	; 0
+    1b1c:	90 81       	ld	r25, Z
+    1b1e:	95 ff       	sbrs	r25, 5
+    1b20:	fd cf       	rjmp	.-6      	; 0x1b1c <uart_send+0x4>
+  UDR0 = c;
+    1b22:	80 93 c6 00 	sts	0x00C6, r24
+    1b26:	08 95       	ret
+
+00001b28 <uart_send16>:
+}
+
+void uart_send16(uint16_t c) {
+    1b28:	cf 93       	push	r28
+    1b2a:	c8 2f       	mov	r28, r24
+  uart_send(c >> 8);
+    1b2c:	89 2f       	mov	r24, r25
+    1b2e:	f4 df       	rcall	.-24     	; 0x1b18 <uart_send>
+  uart_send(c & 0x00FF);
+    1b30:	8c 2f       	mov	r24, r28
+    1b32:	f2 df       	rcall	.-28     	; 0x1b18 <uart_send>
+}
+    1b34:	cf 91       	pop	r28
+    1b36:	08 95       	ret
+
+00001b38 <uart_send16LE>:
+
+void uart_send16LE(uint16_t c) {
+    1b38:	cf 93       	push	r28
+    1b3a:	c9 2f       	mov	r28, r25
+  uart_send(c & 0x00FF);
+    1b3c:	ed df       	rcall	.-38     	; 0x1b18 <uart_send>
+  uart_send(c >> 8);
+    1b3e:	8c 2f       	mov	r24, r28
+    1b40:	eb df       	rcall	.-42     	; 0x1b18 <uart_send>
+}
+    1b42:	cf 91       	pop	r28
+    1b44:	08 95       	ret
+
+00001b46 <uart_send32>:
+
+void uart_send32(uint32_t c) {
+    1b46:	cf 93       	push	r28
+    1b48:	df 93       	push	r29
+    1b4a:	00 d0       	rcall	.+0      	; 0x1b4c <uart_send32+0x6>
+    1b4c:	00 d0       	rcall	.+0      	; 0x1b4e <uart_send32+0x8>
+    1b4e:	cd b7       	in	r28, 0x3d	; 61
+    1b50:	de b7       	in	r29, 0x3e	; 62
+    1b52:	69 83       	std	Y+1, r22	; 0x01
+    1b54:	7a 83       	std	Y+2, r23	; 0x02
+    1b56:	8b 83       	std	Y+3, r24	; 0x03
+    1b58:	9c 83       	std	Y+4, r25	; 0x04
+  char *p = (char *)&c;
+  uart_send(p[0]);
+    1b5a:	86 2f       	mov	r24, r22
+    1b5c:	dd df       	rcall	.-70     	; 0x1b18 <uart_send>
+  uart_send(p[1]);
+    1b5e:	8a 81       	ldd	r24, Y+2	; 0x02
+    1b60:	db df       	rcall	.-74     	; 0x1b18 <uart_send>
+  uart_send(p[2]);
+    1b62:	8b 81       	ldd	r24, Y+3	; 0x03
+    1b64:	d9 df       	rcall	.-78     	; 0x1b18 <uart_send>
+  uart_send(p[3]);
+    1b66:	8c 81       	ldd	r24, Y+4	; 0x04
+    1b68:	d7 df       	rcall	.-82     	; 0x1b18 <uart_send>
+}
+    1b6a:	0f 90       	pop	r0
+    1b6c:	0f 90       	pop	r0
+    1b6e:	0f 90       	pop	r0
+    1b70:	0f 90       	pop	r0
+    1b72:	df 91       	pop	r29
+    1b74:	cf 91       	pop	r28
+    1b76:	08 95       	ret
+
+00001b78 <uart_recv>:
+uint8_t uart_recv_pending() {
+  return ((UCSR0A & (1 << RXC0 )) == 0);
+}
+
+uint32_t uart_proxy_bytes_remaining = 0;
+uint8_t uart_recv() {
+    1b78:	cf 93       	push	r28
+  while (( UCSR0A & (1 << RXC0 )) == 0) {}; // Do nothing until data have been received and is ready to be read from UDR
+    1b7a:	e0 ec       	ldi	r30, 0xC0	; 192
+    1b7c:	f0 e0       	ldi	r31, 0x00	; 0
+    1b7e:	80 81       	ld	r24, Z
+    1b80:	88 23       	and	r24, r24
+    1b82:	ec f7       	brge	.-6      	; 0x1b7e <uart_recv+0x6>
+
+  uint8_t c = UDR0;
+    1b84:	c0 91 c6 00 	lds	r28, 0x00C6
+
+  if (uart_proxy_bytes_remaining) {
+    1b88:	40 91 01 01 	lds	r20, 0x0101
+    1b8c:	50 91 02 01 	lds	r21, 0x0102
+    1b90:	60 91 03 01 	lds	r22, 0x0103
+    1b94:	70 91 04 01 	lds	r23, 0x0104
+    1b98:	41 15       	cp	r20, r1
+    1b9a:	51 05       	cpc	r21, r1
+    1b9c:	61 05       	cpc	r22, r1
+    1b9e:	71 05       	cpc	r23, r1
+    1ba0:	71 f0       	breq	.+28     	; 0x1bbe <uart_recv+0x46>
+    uart_proxy_bytes_remaining--;
+    1ba2:	41 50       	subi	r20, 0x01	; 1
+    1ba4:	51 09       	sbc	r21, r1
+    1ba6:	61 09       	sbc	r22, r1
+    1ba8:	71 09       	sbc	r23, r1
+    1baa:	40 93 01 01 	sts	0x0101, r20
+    1bae:	50 93 02 01 	sts	0x0102, r21
+    1bb2:	60 93 03 01 	sts	0x0103, r22
+    1bb6:	70 93 04 01 	sts	0x0104, r23
+    uart_send(c);
+    1bba:	8c 2f       	mov	r24, r28
+    1bbc:	ad df       	rcall	.-166    	; 0x1b18 <uart_send>
+  }
+
+  return c;
+}
+    1bbe:	8c 2f       	mov	r24, r28
+    1bc0:	cf 91       	pop	r28
+    1bc2:	08 95       	ret
+
+00001bc4 <uart_recv16>:
+
+uint16_t uart_recv16() {
+    1bc4:	cf 93       	push	r28
+  return (uart_recv() << 8 | uart_recv());
+    1bc6:	d8 df       	rcall	.-80     	; 0x1b78 <uart_recv>
+    1bc8:	c8 2f       	mov	r28, r24
+    1bca:	d6 df       	rcall	.-84     	; 0x1b78 <uart_recv>
+    1bcc:	20 e0       	ldi	r18, 0x00	; 0
+    1bce:	28 2b       	or	r18, r24
+}
+    1bd0:	82 2f       	mov	r24, r18
+    1bd2:	9c 2f       	mov	r25, r28
+    1bd4:	cf 91       	pop	r28
+    1bd6:	08 95       	ret
+
+00001bd8 <uart_recv32>:
+
+uint16_t uart_recv16LE() {
+  return uart_recv() | (uart_recv() << 8);
+}
+
+uint32_t uart_recv32() {
+    1bd8:	0f 93       	push	r16
+    1bda:	1f 93       	push	r17
+    1bdc:	cf 93       	push	r28
+    1bde:	df 93       	push	r29
+  return (
+    (uint32_t)uart_recv() << 24 |
+    1be0:	cb df       	rcall	.-106    	; 0x1b78 <uart_recv>
+    1be2:	d8 2f       	mov	r29, r24
+    (uint32_t)uart_recv() << 16 |
+    1be4:	c9 df       	rcall	.-110    	; 0x1b78 <uart_recv>
+    1be6:	08 2f       	mov	r16, r24
+    (uint16_t)uart_recv() << 8  |
+    1be8:	c7 df       	rcall	.-114    	; 0x1b78 <uart_recv>
+    1bea:	c8 2f       	mov	r28, r24
+    uart_recv()
+    1bec:	c5 df       	rcall	.-118    	; 0x1b78 <uart_recv>
+}
+
+uint32_t uart_recv32() {
+  return (
+    (uint32_t)uart_recv() << 24 |
+    (uint32_t)uart_recv() << 16 |
+    1bee:	10 e0       	ldi	r17, 0x00	; 0
+    1bf0:	20 e0       	ldi	r18, 0x00	; 0
+    1bf2:	30 e0       	ldi	r19, 0x00	; 0
+    1bf4:	98 01       	movw	r18, r16
+    1bf6:	11 27       	eor	r17, r17
+    1bf8:	00 27       	eor	r16, r16
+  return uart_recv() | (uart_recv() << 8);
+}
+
+uint32_t uart_recv32() {
+  return (
+    (uint32_t)uart_recv() << 24 |
+    1bfa:	3d 2b       	or	r19, r29
+    (uint32_t)uart_recv() << 16 |
+    1bfc:	08 2b       	or	r16, r24
+    (uint16_t)uart_recv() << 8  |
+    1bfe:	9c 2f       	mov	r25, r28
+    1c00:	80 e0       	ldi	r24, 0x00	; 0
+}
+
+uint32_t uart_recv32() {
+  return (
+    (uint32_t)uart_recv() << 24 |
+    (uint32_t)uart_recv() << 16 |
+    1c02:	a0 e0       	ldi	r26, 0x00	; 0
+    1c04:	b0 e0       	ldi	r27, 0x00	; 0
+uint16_t uart_recv16LE() {
+  return uart_recv() | (uart_recv() << 8);
+}
+
+uint32_t uart_recv32() {
+  return (
+    1c06:	08 2b       	or	r16, r24
+    1c08:	19 2b       	or	r17, r25
+    1c0a:	2a 2b       	or	r18, r26
+    1c0c:	3b 2b       	or	r19, r27
+    (uint32_t)uart_recv() << 24 |
+    (uint32_t)uart_recv() << 16 |
+    (uint16_t)uart_recv() << 8  |
+    uart_recv()
+   );
+}
+    1c0e:	60 2f       	mov	r22, r16
+    1c10:	71 2f       	mov	r23, r17
+    1c12:	82 2f       	mov	r24, r18
+    1c14:	93 2f       	mov	r25, r19
+    1c16:	df 91       	pop	r29
+    1c18:	cf 91       	pop	r28
+    1c1a:	1f 91       	pop	r17
+    1c1c:	0f 91       	pop	r16
+    1c1e:	08 95       	ret
+
+00001c20 <uart_pipe_passive>:
+
+void uart_pipe_passive(uint32_t length) {
+  uart_proxy_bytes_remaining = length;
+    1c20:	60 93 01 01 	sts	0x0101, r22
+    1c24:	70 93 02 01 	sts	0x0102, r23
+    1c28:	80 93 03 01 	sts	0x0103, r24
+    1c2c:	90 93 04 01 	sts	0x0104, r25
+    1c30:	08 95       	ret
+
+00001c32 <uart_pipe_active>:
+}
+
+void uart_pipe_active(uint32_t length) {
+    1c32:	cf 92       	push	r12
+    1c34:	df 92       	push	r13
+    1c36:	ef 92       	push	r14
+    1c38:	ff 92       	push	r15
+    1c3a:	6b 01       	movw	r12, r22
+    1c3c:	7c 01       	movw	r14, r24
+  while (length--) {
+    1c3e:	61 15       	cp	r22, r1
+    1c40:	71 05       	cpc	r23, r1
+    1c42:	81 05       	cpc	r24, r1
+    1c44:	91 05       	cpc	r25, r1
+    1c46:	41 f0       	breq	.+16     	; 0x1c58 <uart_pipe_active+0x26>
+    uart_send(uart_recv());
+    1c48:	97 df       	rcall	.-210    	; 0x1b78 <uart_recv>
+    1c4a:	66 df       	rcall	.-308    	; 0x1b18 <uart_send>
+    1c4c:	81 e0       	ldi	r24, 0x01	; 1
+    1c4e:	c8 1a       	sub	r12, r24
+    1c50:	d1 08       	sbc	r13, r1
+    1c52:	e1 08       	sbc	r14, r1
+    1c54:	f1 08       	sbc	r15, r1
+void uart_pipe_passive(uint32_t length) {
+  uart_proxy_bytes_remaining = length;
+}
+
+void uart_pipe_active(uint32_t length) {
+  while (length--) {
+    1c56:	c1 f7       	brne	.-16     	; 0x1c48 <uart_pipe_active+0x16>
+    uart_send(uart_recv());
+  }
+}
+    1c58:	ff 90       	pop	r15
+    1c5a:	ef 90       	pop	r14
+    1c5c:	df 90       	pop	r13
+    1c5e:	cf 90       	pop	r12
+    1c60:	08 95       	ret
+
+00001c62 <uart_sync_init>:
+
+void uart_sync_init() {
+
+  // Turn on the transmission and reception circuitry
+  UCSR0B = (1 << RXEN0) | (1 << TXEN0);
+    1c62:	88 e1       	ldi	r24, 0x18	; 24
+    1c64:	80 93 c1 00 	sts	0x00C1, r24
+  
+  // Use 8- bit character sizes
+  UCSR0C = (1 << UMSEL01 ) | (1 << UCSZ00) | (1 << UCSZ01); 
+    1c68:	86 e8       	ldi	r24, 0x86	; 134
+    1c6a:	80 93 c2 00 	sts	0x00C2, r24
+  
+  // Load upper 8- bits of the baud rate value into the high byte of the UBRR register
+  UBRR0H = (BAUD_PRESCALE >> 8); 
+    1c6e:	10 92 c5 00 	sts	0x00C5, r1
+  
+  // Load lower 8 - bits of the baud rate value into the low byte of the UBRR register  
+  UBRR0L = BAUD_PRESCALE; 
+    1c72:	83 e0       	ldi	r24, 0x03	; 3
+    1c74:	80 93 c4 00 	sts	0x00C4, r24
+    1c78:	08 95       	ret
+
+00001c7a <memset>:
+    1c7a:	dc 01       	movw	r26, r24
+    1c7c:	01 c0       	rjmp	.+2      	; 0x1c80 <memset+0x6>
+    1c7e:	6d 93       	st	X+, r22
+    1c80:	41 50       	subi	r20, 0x01	; 1
+    1c82:	50 40       	sbci	r21, 0x00	; 0
+    1c84:	e0 f7       	brcc	.-8      	; 0x1c7e <memset+0x4>
+    1c86:	08 95       	ret
+
+00001c88 <_exit>:
+    1c88:	f8 94       	cli
+
+00001c8a <__stop_program>:
+    1c8a:	ff cf       	rjmp	.-2      	; 0x1c8a <__stop_program>

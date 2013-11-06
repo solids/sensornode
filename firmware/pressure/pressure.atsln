@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "pressure", "pressure\pressure.cproj", "{619C920E-30FB-4EA9-83DF-4717231F0A7F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{21DEA2E9-42A4-4A64-82B4-63665482D7CF} = {21DEA2E9-42A4-4A64-82B4-63665482D7CF}
+	EndProjectSection
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "protocol", "..\protocol\protocol.cproj", "{21DEA2E9-42A4-4A64-82B4-63665482D7CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{619C920E-30FB-4EA9-83DF-4717231F0A7F}.Debug|AVR.ActiveCfg = Debug|AVR
+		{619C920E-30FB-4EA9-83DF-4717231F0A7F}.Debug|AVR.Build.0 = Debug|AVR
+		{619C920E-30FB-4EA9-83DF-4717231F0A7F}.Release|AVR.ActiveCfg = Release|AVR
+		{619C920E-30FB-4EA9-83DF-4717231F0A7F}.Release|AVR.Build.0 = Release|AVR
+		{21DEA2E9-42A4-4A64-82B4-63665482D7CF}.Debug|AVR.ActiveCfg = Debug|AVR
+		{21DEA2E9-42A4-4A64-82B4-63665482D7CF}.Debug|AVR.Build.0 = Debug|AVR
+		{21DEA2E9-42A4-4A64-82B4-63665482D7CF}.Release|AVR.ActiveCfg = Release|AVR
+		{21DEA2E9-42A4-4A64-82B4-63665482D7CF}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

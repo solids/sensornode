@@ -1,2 +1,2 @@
 node_modules
-
+**/Debug/*.{d,eep,elf,lss,o,srec}

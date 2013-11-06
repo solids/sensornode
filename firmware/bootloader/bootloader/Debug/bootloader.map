@@ -1,0 +1,480 @@
+Archive member included because of file (symbol)
+
+C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                              bootloader.o (uart_send)
+c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+                              c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o (exit)
+c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+                              bootloader.o (__do_clear_bss)
+c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4\libc.a(memset.o)
+                              bootloader.o (memset)
+
+Discarded input sections
+
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o
+ .text          0x00000000        0x0 bootloader.o
+ .bss           0x00000000        0x0 bootloader.o
+ .bss.mode_state
+                0x00000000        0x1 bootloader.o
+ .text          0x00000000        0x0 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+ .bss           0x00000000        0x0 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+ .text.uart_recv_pending
+                0x00000000        0xe C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+ .text.uart_recv16LE
+                0x00000000       0x16 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4\libc.a(memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4\libc.a(memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00002000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o
+LOAD bootloader.o
+START GROUP
+LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4\libm.a
+LOAD C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a
+END GROUP
+Address of section .text set to 0x1800
+Address of section .bootloader set to 0x1800
+LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a
+LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4\libc.a
+LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00001800      0x48c
+ *(.vectors)
+ .vectors       0x00001800       0x34 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o
+                0x00001800                __vector_default
+                0x00001800                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00001834                . = ALIGN (0x2)
+                0x00001834                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00001834        0x0 linker stubs
+ *(.trampolines*)
+                0x00001834                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00001834                __ctors_start = .
+ *(.ctors)
+                0x00001834                __ctors_end = .
+                0x00001834                __dtors_start = .
+ *(.dtors)
+                0x00001834                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00001834        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o
+                0x00001834                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00001834        0xc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00001840       0x10 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+                0x00001840                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00001850        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o
+ *(.init9)
+ *(.text)
+ .text          0x00001854        0x2 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o
+                0x00001854                __vector_22
+                0x00001854                __vector_1
+                0x00001854                __vector_24
+                0x00001854                __vector_12
+                0x00001854                __bad_interrupt
+                0x00001854                __vector_6
+                0x00001854                __vector_3
+                0x00001854                __vector_23
+                0x00001854                __vector_25
+                0x00001854                __vector_11
+                0x00001854                __vector_13
+                0x00001854                __vector_17
+                0x00001854                __vector_19
+                0x00001854                __vector_7
+                0x00001854                __vector_5
+                0x00001854                __vector_4
+                0x00001854                __vector_9
+                0x00001854                __vector_2
+                0x00001854                __vector_21
+                0x00001854                __vector_15
+                0x00001854                __vector_8
+                0x00001854                __vector_14
+                0x00001854                __vector_10
+                0x00001854                __vector_16
+                0x00001854                __vector_18
+                0x00001854                __vector_20
+                0x00001856                . = ALIGN (0x2)
+ *(.text.*)
+ .text.boot_program_page
+                0x00001856       0x70 bootloader.o
+                0x00001856                boot_program_page
+ .text.bootloader
+                0x000018c6      0x1e8 bootloader.o
+                0x000018c6                bootloader
+ .text.startup.main
+                0x00001aae       0x6a bootloader.o
+                0x00001aae                main
+ .text.uart_send
+                0x00001b18       0x10 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00001b18                uart_send
+ .text.uart_send16
+                0x00001b28       0x10 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00001b28                uart_send16
+ .text.uart_send16LE
+                0x00001b38        0xe C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00001b38                uart_send16LE
+ .text.uart_send32
+                0x00001b46       0x32 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00001b46                uart_send32
+ .text.uart_recv
+                0x00001b78       0x4c C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00001b78                uart_recv
+ .text.uart_recv16
+                0x00001bc4       0x14 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00001bc4                uart_recv16
+ .text.uart_recv32
+                0x00001bd8       0x48 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00001bd8                uart_recv32
+ .text.uart_pipe_passive
+                0x00001c20       0x12 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00001c20                uart_pipe_passive
+ .text.uart_pipe_active
+                0x00001c32       0x30 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00001c32                uart_pipe_active
+ .text.uart_sync_init
+                0x00001c62       0x18 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00001c62                uart_sync_init
+ .text.avr-libc
+                0x00001c7a        0xe c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4\libc.a(memset.o)
+                0x00001c7a                memset
+                0x00001c88                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001c88        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+                0x00001c88                _exit
+                0x00001c88                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001c88        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001c8c                _etext = .
+
+.data           0x00800100        0x0 load address 0x00001c8c
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o
+ .data          0x00800100        0x0 bootloader.o
+ .data          0x00800100        0x0 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+ .data          0x00800100        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_exit.o)
+ .data          0x00800100        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/avr4\libgcc.a(_clear_bss.o)
+ .data          0x00800100        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4\libc.a(memset.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800100                . = ALIGN (0x2)
+                0x00800100                _edata = .
+                0x00800100                PROVIDE (__data_end, .)
+
+.bss            0x00800100        0x5
+                0x00800100                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.mode      0x00800100        0x1 bootloader.o
+                0x00800100                mode
+ .bss.uart_proxy_bytes_remaining
+                0x00800101        0x4 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                0x00800101                uart_proxy_bytes_remaining
+ *(COMMON)
+                0x00800105                PROVIDE (__bss_end, .)
+                0x00001c8c                __data_load_start = LOADADDR (.data)
+                0x00001c8c                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800105        0x1
+                0x00800105                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+ .noinit        0x00800105        0x1 bootloader.o
+                0x00800105                bootloading
+                0x00800106                PROVIDE (__noinit_end, .)
+                0x00800106                _end = .
+                0x00800106                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab           0x00000000      0x738
+ *(.stab)
+ .stab          0x00000000      0x6cc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o
+ .stab          0x000006cc       0x6c c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4\libc.a(memset.o)
+                                 0x78 (size before relaxing)
+
+.stabstr        0x00000000      0x10b
+ *(.stabstr)
+ .stabstr       0x00000000      0x10b c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.2.1002/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.7.2/../../../../avr/lib/avr4/crtm88pa.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x2f
+ *(.comment)
+ .comment       0x00000000       0x2f bootloader.o
+                                 0x30 (size before relaxing)
+ .comment       0x00000000       0x30 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xa8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x30 bootloader.o
+ .debug_aranges
+                0x00000030       0x78 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000      0x9e8
+ *(.debug_info)
+ .debug_info    0x00000000      0x6cb bootloader.o
+ .debug_info    0x000006cb      0x31d C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x3bf
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x274 bootloader.o
+ .debug_abbrev  0x00000274      0x14b C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+
+.debug_line     0x00000000      0x4ee
+ *(.debug_line)
+ .debug_line    0x00000000      0x338 bootloader.o
+ .debug_line    0x00000338      0x1b6 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+
+.debug_frame    0x00000000      0x1e0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0xac bootloader.o
+ .debug_frame   0x000000ac      0x134 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+
+.debug_str      0x00000000      0x39b
+ *(.debug_str)
+ .debug_str     0x00000000      0x314 bootloader.o
+                                0x352 (size before relaxing)
+ .debug_str     0x00000314       0x87 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+                                0x1a4 (size before relaxing)
+
+.debug_loc      0x00000000      0x532
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x2ef bootloader.o
+ .debug_loc     0x000002ef      0x243 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000       0xb8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x50 bootloader.o
+ .debug_ranges  0x00000050       0x68 C:\Users\tmpvar\work\sensornode\firmware\protocol\Debug\libprotocol.a(uart_sync.o)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(bootloader.elf elf32-avr)
+LOAD linker stubs
+
+.bootloader     0x00001800        0x0
