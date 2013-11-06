@@ -24,7 +24,7 @@ void uart_send32(uint32_t c) {
 }
 
 uint8_t uart_recv_pending() {
-  return ((UCSR0A & (1 << RXC0 )) == 0);
+  return ((UCSR0A & (1 << RXC0 )));
 }
 
 uint32_t uart_proxy_bytes_remaining = 0;
